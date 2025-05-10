@@ -1,180 +1,91 @@
-/* Reset default margin and padding */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and general page styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
-}
-
-/* Header and Navigation Styling */
-header {
-    background-color: #2c3e50;
+    background: #f9f9f9;
+    color: #333;
     padding: 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
-header nav ul {
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
+    flex-wrap: wrap;
 }
 
-header nav ul li {
+nav ul li {
     margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
-    font-size: 18px;
     text-decoration: none;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Styling */
 main {
-    margin-top: 80px;
+    max-width: 900px;
+    margin: auto;
     padding: 20px;
-}
-
-/* Article Section Styling */
-.article-section h1, .article-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.article-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-/* Destination List and Cards */
-.destination-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.destination-card {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 0 10px #ccc;
 }
 
-.destination-image {
+h2 {
+    color: #004080;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+img {
     width: 100%;
-    height: 200px;
+    max-height: 400px;
     object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
 }
 
-.destination-info {
-    padding: 15px;
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-.destination-info h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.destination-info p {
-    font-size: 1em;
-    color: #555;
-}
-
-/* Advertisement Section Styling (Centered) */
 .advertisement {
-    background-color: #e74c3c;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    margin: 30px auto;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 8px;
-}
-
-.advertisement h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.advertisement p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.advertisement a {
-    color: #e74c3c;
-    background-color: white;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.advertisement a:hover {
-    background-color: #c0392b;
-    color: white;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #2c3e50;
-    color: white;
+    background: #fff8e1;
+    border: 2px dashed #ffc107;
     padding: 20px;
+    margin: 40px 0;
     text-align: center;
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
+.advertisement img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 5px;
 }
 
-footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-footer ul li a {
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: #004080;
     color: white;
-    text-decoration: none;
-}
-
-footer p {
-    margin-top: 10px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .destination-list {
-        grid-template-columns: 1fr;
-    }
-
-    .advertisement a {
-        font-size: 1.5em;
-    }
-
-    .destination-info h3 {
-        font-size: 1.3em;
-    }
 }
