@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Blog</title>
+  <title>My Travel Blog - Explore Incredible India</title>
+  <meta name="description" content="Welcome to My Travel Blog. Read blogs about tourism in India, travel tips, destinations, and cultural experiences.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>My Awesome Blog</h1>
+    <h1>Incredible India Travel Blog</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="#">About</a>
@@ -17,25 +18,70 @@
     </nav>
   </header>
 
-  <!-- Ad section -->
+  <!-- Ad Placeholder -->
   <div class="ad-container">
-    <!-- Replace this with your AdSense code after approval -->
-    <p>[Ad placeholder]</p>
+    <p>[Ad Placeholder - Top Banner]</p>
   </div>
 
-  <main>
-    <section class="post-list">
-      <article>
-        <h2><a href="blog1.html">How to Start Blogging</a></h2>
-        <p>Start your blogging journey with simple HTML, CSS, and JS.</p>
-      </article>
-      <!-- Add more articles here -->
-    </section>
+  <main style="max-width: 900px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 10px;">
+    <h2>Search Blog Posts</h2>
+    <input type="text" id="searchInput" placeholder="Search for blogs..." style="padding: 10px; width: 100%; max-width: 500px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc;">
+    <div id="searchResults" style="margin-top: 20px;"></div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Latest Blogs</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li><a href="tourism-in-india.html">🌏 Tourism in India</a></li>
+      <!-- Add more blog links here -->
+    </ul>
   </main>
 
   <footer>
-    <p>© 2025 MyBlog.com</p>
+    <p>© 2025 MyTravelBlog.com | All rights reserved.</p>
   </footer>
+
+  <script>
+    const blogs = [
+      {
+        title: "Tourism in India",
+        link: "tourism-in-india.html",
+        keywords: "india tourism taj mahal travel kerala rajasthan"
+      }
+      // Add more blogs here as needed
+    ];
+
+    const input = document.getElementById("searchInput");
+    const results = document.getElementById("searchResults");
+
+    input.addEventListener("input", function () {
+      const query = this.value.toLowerCase().trim();
+      results.innerHTML = "";
+
+      if (query === "") return;
+
+      const filtered = blogs.filter(blog =>
+        blog.title.toLowerCase().includes(query) ||
+        blog.keywords.toLowerCase().includes(query)
+      );
+
+      if (filtered.length === 0) {
+        results.innerHTML = "<p>No results found.</p>";
+      } else {
+        const list = document.createElement("ul");
+        list.style.listStyle = "none";
+        list.style.padding = "0";
+
+        filtered.forEach(blog => {
+          const item = document.createElement("li");
+          item.innerHTML = `<a href="${blog.link}">${blog.title}</a>`;
+          list.appendChild(item);
+        });
+
+        results.appendChild(list);
+      }
+    });
+  </script>
 
 </body>
 </html>
