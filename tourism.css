@@ -1,8 +1,10 @@
 /* Basic Reset */
 * {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     box-sizing: border-box;
+    margin: 40px auto;
+    
 }
 
 body {
@@ -11,6 +13,7 @@ body {
     background: #f9f9f9;
     color: #333;
     padding: 20px;
+    
 }
 
 header {
